@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js onmouseover</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            text-align: center;
+            background: #f2f2f2;
+            color: rgb(47, 47, 47);
+            font-family: 'Noto Sans TC', sans-serif;
+            height: 100vh;
+        }
+        .h1-box{
+            display: inline-block;
+            position: relative;
+
+        }
+        .h1-box h1{
+            margin: 20px 0;
+            font-weight: 500;
+            font-size: 40px;
+        }
+        .h1-bgc{
+            background: rgba(244, 21, 21, 0.716);
+            width: 240px;
+            height: 23px;
+            position: absolute;
+            top: 50px;
+            left: 9px;
+            z-index: -1;
+        }
+        .img-box{
+            position: relative;
+        }
+        .img-box img{
+            width: 1000px;
+            color: #fff;
+        }
+        .beef-point{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #ae2622;
+            position: absolute;
+            border: 3px solid #fff;
+        }
+        .beef-point:hover{
+            background: #e71811;
+            border: 5px solid #fff;
+            width: 23px;
+            height: 23px;
+        }
+        .beef-tongue{
+            top: 160px;
+            left: 260px;
+        }
+        .beef-neck{
+            top: 120px;
+            left: 400px;
+        }
+        .beef-chuck{
+            top: 130px;
+            left: 500px;
+        }
+        .beef-brisket{
+            top: 280px;
+            left: 500px;
+        }
+        .beef-shank{
+            top: 400px;
+            left: 580px;
+        }
+        .beef-rib{
+            top: 130px;
+            left: 680px;
+        }
+        .beef-shortribs{
+            top: 230px;
+            left: 680px;
+        }
+        .beef-plate{
+            top: 310px;
+            left: 680px;
+        }
+        .beef-shortloin{
+            top: 180px;
+            left: 785px;
+        }
+        .beef-flank{
+            top: 300px;
+            left: 785px;
+        }
+        .beef-sirloin{
+            top: 220px;
+            left: 870px;
+        }
+        .beef-round{
+            top: 180px;
+            left: 980px;
+        }
+        .beef-backshank{
+            top: 350px;
+            left: 950px;
+        }
+        .explain-box{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 130px;
+            right: 100px;
+            background: rgba(255, 255, 255, 0.965);
+            width: 30%;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            /* display: none; */
+        }
+        .explain-img{
+            margin: 0 auto;
+            width: 100%;
+            height: 300px;
+        }
+        .explain-img img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+        .explain-box h3{
+            font-size: 30px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        .explain-box p{
+            margin: 10px 0;
+            padding: 0 50px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="h1-box">
+        <h1>牛肉部位介紹</h1>
+        <div class="h1-bgc"></div>
+    </div>
+
+    <div class="point-box">
+        <div class="img-box">
+            <img src="img1 (2).svg" alt="">
+            <div class="beef-point beef-tongue" onmouseover="beefTongue()" onmouseout="nobeefTongue()"></div>
+            <div class="beef-point beef-neck" onmouseover="beefNeck()" onmouseout="nobeefNeck()"></div>
+            <div class="beef-point beef-chuck" onmouseover="beefChuck()" onmouseout="nobeefChuck()"></div>
+            <div class="beef-point beef-brisket" onmouseover="beefBrisket()" onmouseout="nobeefBrisket()"></div>
+            <div class="beef-point beef-shank"></div>
+            <div class="beef-point beef-rib"></div>
+            <div class="beef-point beef-shortribs"></div>
+            <div class="beef-point beef-plate"></div>
+            <div class="beef-point beef-shortloin"></div>
+            <div class="beef-point beef-flank"></div>
+            <div class="beef-point beef-sirloin"></div>
+            <div class="beef-point beef-round"></div>
+            <div class="beef-point beef-backshank"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tongue_box" class="explain-box">
+        <div class="explain-img">
+            <img src="/beef/1.jpeg" alt="">
+        </div>
+        <h3>牛舌</h3>
+        <p>牛舌，分為舌尖肉、舌中肉與舌根肉，口感也有所區別。燒肉的牛舌用富含脂肪的舌根肉，是整根牛舌中最高級的部位，如花的油脂分佈均勻</p>
+    </div>
+
+    <div id="neck_box" class="explain-box">
+        <div class="explain-img">
+            <img src="/beef/2.jpeg" alt="">
+        </div>
+        <h3>牛頸肉</h3>
+        <p>牛頸肉，是牛經常運動的部位，所以肉質較硬，而且帶有不少韌筋。富含肉汁和膠原蛋白，適合慢火燉煮的彩色，或是製作湯品的食材</p>
+    </div>
+
+    <div id="chuck_box" class="explain-box">
+        <div class="explain-img">
+            <img src="/beef/3.webp" alt="">
+        </div>
+        <h3>牛頸肉</h3>
+        <p>牛頸肉，是牛經常運動的部位，所以肉質較硬，而且帶有不少韌筋。富含肉汁和膠原蛋白，適合慢火燉煮的彩色，或是製作湯品的食材</p>
+    </div>
+    
+    <div id="brisket_box" class="explain-box">
+        <div class="explain-img">
+            <img src="/beef/4.jpeg" alt="">
+        </div>
+        <h3>牛前胸</h3>
+        <p>牛前胸，因呼吸而運動量大的肌肉，幾乎沒有脂肪故肉質堅韌，口感緊實，適合長時間熬煮成紅燒、燉煮湯料理，或做成肉絲、絞肉</p>
+    </div>
+    
+    <div id="shank_box" class="explain-box">
+        <div class="explain-img">
+            <img src="/beef/5.jpeg" alt="">
+        </div>
+        <h3>牛腱</h3>
+        <p>牛腱位於牛的小腿部位，是牛經常運動的部位，所以肌肉發達、筋多，肉質較堅實，牛肉麵、牛肉湯、滷味料理等都很常使用這個部位</p>
+    </div>
+    
+    <div id="rib_box" class="explain-box">
+        <div class="explain-img">
+            <img src="/beef/6.jpeg" alt="">
+        </div>
+        <h3>肋脊部</h3>
+        <p>肋脊部，屬於背部的前段，因運動量較少，肉質軟嫩且油花分布均勻，許多牛排料理都是取這部位的牛肉。「沙朗」一詞通常是指「肋眼牛排」</p>
+    </div>
+    
+    <div id="shortribs_box" class="explain-box">
+        <div class="explain-img">
+            <img src="/beef/7.jpeg" alt="">
+        </div>
+        <h3>牛小排</h3>
+        <p>牛小排位於肋脊部，取自牛的肋脊第6至第8根部位之間，
+        牛小排的油脂含量豐富且肉質結實，油花分布均勻，是許多人喜歡的一個部位，價格也昂貴一些</p>
+    </div>
+    
+    <div id="plate_box" class="explain-box">
+        <div class="explain-img">
+            <img src="/beef/8.jpeg" alt="">
+        </div>
+        <h3>牛胸腹</h3>
+        <p>牛胸腹肉，火鍋店常用之部位，牛隻大所以腹部的區域也較大，軟嫩富含油脂，看起來有很多肥肥的油脂就是牛五花，這個部位的油花一層油一層肉</p>
+    </div>
+    
+    <div id="shortloin_box" class="explain-box">
+        <div class="explain-img">
+            <img src="/beef/9.png" alt="">
+        </div>
+        <h3>牛前腰脊部</h3>
+        <p>前腰脊部，牛最軟嫩一塊肉，有一塊T型的骨頭，把丁骨拆開，就分別是「菲力牛排｣和「紐約克牛排」，菲力牛排精瘦鮮嫩如果要煎這塊肉需要一點技術，超過5分熟的菲力真的不好吃，紐約克牛排吃起來具嚼勁油花相對少</p>
+    </div>
+
+
+    <script>
+        function beefTongue(){
+            tongue_box.style.display="block";
+        }
+        function nobeefTongue(){
+            tongue_box.style.display="none";
+        }
+        function beefNeck(){
+            neck_box.style.display="block";
+        }
+        function nobeefNeck(){
+            neck_box.style.display="none";
+        }
+        function beefChuck(){
+            chuck_box.style.display="block";
+        }
+        function nobeefChuck(){
+            chuck_box.style.display="none";
+        }
+        function beefBrisket(){
+            brisket_box.style.display="block";
+        }
+        function nobeefBrisket(){
+            brisket_box.style.display="none";
+        }
+    </script>
+</body>
+</html>
