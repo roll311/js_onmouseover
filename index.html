@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>牛的部位介紹</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     
@@ -13,19 +14,74 @@
 
     <!-- 牛的主體 -->
     <div class="all-box">
-        <img src="./photo/23891425.png" alt="">
+        <img src="./photo/23891425拷貝.png" alt="">
         <div class="meadow"></div>
         <div class="saymoo">
             <div class="say-top"></div>
             <div class="moo">哞</div>
             <div class="say-bottom"></div>
         </div>
-        <div class="tongue" onmouseover="Tongue()" onmouseout="NoTongue()">
+        <!-- 各部位觸發區 -->
+        <!-- 牛舌 -->
+        <div class="tongue hover-all" onmouseover="Tongue()" onmouseout="NoTongue()">
             <img src="./photo/beef1.png" alt="">
+        </div>
+        <!-- 頸部 -->
+        <div class="neck hover-all" onmouseover="Neck()" onmouseout="NoNeck()">
+            <img src="./photo/beef2.png" alt="">
+        </div>
+        <!-- 肩胛部 -->
+        <div class="chuck hover-all" onmouseover="Chuck()" onmouseout="NoChuck()">
+            <img src="./photo/beef3.png" alt="">
+        </div>        
+        <!-- 前胸 -->
+        <div class="brisket hover-all" onmouseover="Brisket()" onmouseout="NoBrisket()">
+            <img src="./photo/beef4.png" alt="">
+        </div>
+        <!-- 牛腱 -->
+        <div class="shank hover-all" onmouseover="Shank()" onmouseout="NoShank()">
+            <img src="./photo/beef5.png" alt="">
+        </div>
+        <!-- 牛後腱 -->
+        <div class="backshank hover-all" onmouseover="backShank()" onmouseout="NobackShank()">
+            <img src="./photo/beef14.png" alt="">
+        </div>
+        <!-- 肋脊部 -->
+        <div class="rib hover-all" onmouseover="Rib()" onmouseout="NoRib()">
+            <img src="./photo/beef6.png" alt="">
+        </div>
+        <!-- 胸腹 -->
+        <div class="plate hover-all" onmouseover="Plate()" onmouseout="NoPlate()">
+            <img src="./photo/beef7.png" alt="">
+        </div>
+        <!-- 前腰脊部 -->
+        <div class="shortloin hover-all" onmouseover="Shortloin()" onmouseout="NoShortloin()">
+            <img src="./photo/beef8.png" alt="">
+        </div>
+        <!-- 腹脇部 -->
+        <div class="flank hover-all" onmouseover="Flank()" onmouseout="NoFlank()">
+            <img src="./photo/beef9.png" alt="">
+        </div>
+        <!-- 後腰脊部 -->
+        <div class="sirloin hover-all" onmouseover="Sirloin()" onmouseout="NoSirloin()">
+            <img src="./photo/beef10.png" alt="">
+        </div>
+        <!-- 里肌肉 -->
+        <div class="tenderloin hover-all" onmouseover="Tenderloin()" onmouseout="NoTenderloin()">
+            <img src="./photo/beef11.png" alt="">
+        </div>
+        <!-- 下腰脊肉 -->
+        <div class="bottomsirloin hover-all" onmouseover="Bottomsirloin()" onmouseout="NoBottomsirloin()">
+            <img src="./photo/beef12.png" alt="">
+        </div>
+        <!-- 後腿 -->
+        <div class="round hover-all" onmouseover="Round()" onmouseout="NoRound()">
+            <img src="./photo/beef13.png" alt="">
         </div>
     </div>
 
     <!-- 各部位說明欄 -->
+    <!-- 牛舌 -->
     <div id="tongue">
         <div class="background-op"></div>
         <div class="explain-box">
@@ -35,11 +91,11 @@
                 <div class="succulent compare-item">
                     <h3>肉質</h3>
                     <div class="group-length">
-                        <p>少</p>
+                        <p>軟</p>
                         <div class="length-box">
                             <div class="length length-1"></div>
                         </div>
-                        <p>多</p>
+                        <p>硬</p>
                     </div>
                 </div>
                 <!-- 2 -->
@@ -48,7 +104,7 @@
                     <div class="group-length">
                         <p>少</p>
                         <div class="length-box">
-                            <div class="length length-1"></div>
+                            <div class="length length-2"></div>
                         </div>
                         <p>多</p>
                     </div>
@@ -57,33 +113,773 @@
                 <div class="calories compare-item">
                     <h3>熱量</h3>
                     <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-3"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/五分熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>5</span>分熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>燒烤牛舌</h6>
+                    <h6>蔥爆炒牛舌</h6>
+                    <br>
+                    <!-- <h6>小雞吵鼻數</h6>
+                    <h6>鼻屬生氣</h6> -->
+                </div>
+        </div>
+    </div>
+
+    <!-- 頸部 -->
+    <div id="neck">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>頸部</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
                         <p>少</p>
                         <div class="length-box">
-                            <div class="length length-1"></div>
+                            <div class="length length-5"></div>
                         </div>
                         <p>多</p>
                     </div>
                 </div>
-            </div>
-            <div class="method box-border">
-                <h3>常見料理</h3>
-                <div class="food-box">
-                    <div class="food-item">
-                        <img src="./photo/1.jpg" alt="">
-                        <span>燒烤牛舌</span>
-                    </div>
-                    <div class="food-item">
-                        <img src="./photo/2.jpg" alt="">
-                        <span>蔥炒牛舌</span>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
                     </div>
                 </div>
             </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/全熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>全</span>熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>醬燒牛頸肉</h6>
+                    <h6>燉牛頸肉湯</h6>
+                    <br>
+                </div>
         </div>
     </div>
 
+    <!-- 肩胛部 -->
+    <div id="chuck">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>肩胛部</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/全熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>全</span>熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>乾煎嫩肩里肌</h6>
+                    <h6>比臉大牛排</h6>
+                    <br>
+                    <h6>牛肉乾</h6>
+                    <h6>火鍋牛肉片</h6>
+                </div>
+        </div>
+    </div>
 
+    <!-- 前胸 -->
+    <div id="brisket">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>前胸</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/全熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>全</span>熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>紅燒牛腩</h6>
+                    <h6>紅酒燉牛腩</h6>
+                    <br>
+                    <h6>清湯牛腩湯</h6>
+                    <h6>咖哩牛腩</h6>
+                </div>
+        </div>
+    </div>
+
+    <!-- 牛腱 -->
+    <div id="shank">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>牛腱</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/全熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>全</span>熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>牛肉麵</h6>
+                    <h6>滷牛腱</h6>
+                    <br>
+                </div>
+        </div>
+    </div>
+
+    <!-- 後牛腱 -->
+    <div id="backshank">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>牛腱</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/全熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>全</span>熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>牛肉麵</h6>
+                    <h6>滷牛腱</h6>
+                    <br>
+                </div>
+        </div>
+    </div>
+
+    <!-- 肋脊部 -->
+    <div id="rib">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>肋脊部</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/全熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>全</span>熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>戰斧牛排</h6>
+                    <h6>老饕牛排</h6>
+                    <br>
+                    <h6>香煎牛肋條</h6>
+                    <h6>炭燒牛小排</h6>
+                </div>
+        </div>
+    </div>
+
+    <!-- 胸腹 -->
+    <div id="plate">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>胸腹</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/全熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>全</span>熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>火鍋肉片</h6>
+                    <h6>燒烤</h6>
+                    <h6>握壽司</h6>
+                    <br>
+                    <h6>牛肉丼飯</h6>
+                    <h6>壽喜燒</h6>
+                </div>
+        </div>
+    </div>
+
+    <!-- 前腰脊部 -->
+    <div id="shortloin">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>前腰脊部</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/五分熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>5</span>分熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>紐約客牛排</h6>
+                    <h6>紅屋牛排</h6>
+                    <br>
+                    <h6>丁骨牛排</h6>
+                    <h6>翼骨牛排</h6>
+                </div>
+        </div>
+    </div>
     
+    <!-- 腹脇部 -->
+    <div id="flank">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>腹脇部</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/五分熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>5</span>分熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>玫瑰肉</h6>
+                    <h6>法蘭克牛排</h6>
+                    <br>
+                </div>
+        </div>
+    </div>
     
+    <!-- 後腰脊部 -->
+    <div id="sirloin">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>後腰脊部</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/五分熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>5</span>分熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>沙朗牛排</h6>
+                    <h6>烤肉串</h6>
+                    <br>
+                </div>
+        </div>
+    </div>
+    
+    <!-- 里肌肉 -->
+    <div id="tenderloin">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>里肌肉</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/五分熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>5</span>分熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>菲力牛排</h6>
+                    <br>
+                </div>
+        </div>
+    </div>
+
+    <!-- 下腰脊肉 -->
+    <div id="bottomsirloin">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>下腰脊肉</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/五分熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>5</span>分熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>牛排</h6>
+                    <h6>燒烤</h6>
+                    <h6>火鍋</h6>
+                    <br>
+                </div>
+        </div>
+    </div>
+
+    <!-- 後腿 -->
+    <div id="round">
+        <div class="background-op"></div>
+        <div class="explain-box">
+            <h2>後腿</h2>
+            <div class="compare box-border">
+                <!-- 1 -->
+                <div class="succulent compare-item">
+                    <h3>肉質</h3>
+                    <div class="group-length">
+                        <p>軟</p>
+                        <div class="length-box">
+                            <div class="length length-4"></div>
+                        </div>
+                        <p>硬</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="marbling compare-item">
+                    <h3>油花</h3>
+                    <div class="group-length">
+                        <p>少</p>
+                        <div class="length-box">
+                            <div class="length length-5"></div>
+                        </div>
+                        <p>多</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="calories compare-item">
+                    <h3>熱量</h3>
+                    <div class="group-length">
+                        <p>低</p>
+                        <div class="length-box">
+                            <div class="length length-6"></div>
+                        </div>
+                        <p>高</p>
+                    </div>
+                </div>
+            </div>
+                <div class="maturity-box">
+                    <div class="maturity-img"><img src="./photo/五分熟.png" alt=""></div>
+                    <div class="maturity-number-box">
+                        <h5>推薦熟度</h5>
+                        <p><span>5</span>分熟</p>
+                    </div>
+                </div>
+                <h4>常見料理方式</h4>
+                <div class="tag">
+                    <h6>骰子牛</h6>
+                    <h6>牛肉丸</h6>
+                    <br>
+                    <h6>和尚頭</h6>
+                    <h6>鵝頸</h6>
+                </div>
+        </div>
+    </div>
+
     
     <script>
         function Tongue (){
@@ -91,6 +887,90 @@
         }
         function NoTongue (){
             tongue.style.display = 'none' ;
+        }
+        function Neck (){
+            neck.style.display = 'block' ;
+        }
+        function NoNeck (){
+            neck.style.display = 'none' ;
+        }
+        function Chuck (){
+            chuck.style.display = 'block' ;
+        }
+        function NoChuck (){
+            chuck.style.display = 'none' ;
+        }
+        function Brisket (){
+            brisket.style.display = 'block' ;
+        }
+        function NoBrisket (){
+            brisket.style.display = 'none' ;
+        }
+        function Shank (){
+            shank.style.display = 'block' ;
+        }
+        function NoShank (){
+            shank.style.display = 'none' ;
+        }
+        function Shank (){
+            shank.style.display = 'block' ;
+        }
+        function NoShank (){
+            shank.style.display = 'none' ;
+        }
+        function backShank (){
+            backshank.style.display = 'block' ;
+        }
+        function NobackShank (){
+            backshank.style.display = 'none' ;
+        }
+        function Rib (){
+            rib.style.display = 'block' ;
+        }
+        function NoRib (){
+            rib.style.display = 'none' ;
+        }
+        function Plate (){
+            plate.style.display = 'block' ;
+        }
+        function NoPlate (){
+            plate.style.display = 'none' ;
+        }
+        function Shortloin (){
+            shortloin.style.display = 'block' ;
+        }
+        function NoShortloin (){
+            shortloin.style.display = 'none' ;
+        }
+        function Flank (){
+            flank.style.display = 'block' ;
+        }
+        function NoFlank (){
+            flank.style.display = 'none' ;
+        }
+        function Sirloin (){
+            sirloin.style.display = 'block' ;
+        }
+        function NoSirloin (){
+            sirloin.style.display = 'none' ;
+        }
+        function Tenderloin (){
+            tenderloin.style.display = 'block' ;
+        }
+        function NoTenderloin (){
+            tenderloin.style.display = 'none' ;
+        }
+        function Bottomsirloin (){
+            bottomsirloin.style.display = 'block' ;
+        }
+        function NoBottomsirloin (){
+            bottomsirloin.style.display = 'none' ;
+        }
+        function Round (){
+            round.style.display = 'block' ;
+        }
+        function NoRound (){
+            round.style.display = 'none' ;
         }
     </script>
 

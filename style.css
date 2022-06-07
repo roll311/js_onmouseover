@@ -1,6 +1,16 @@
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
     @keyframes shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:0 0 20px 0 rgba(0,0,0,.35)}}
+    @keyframes rotate-keyframe {
+  /* 定義每個階段的影格變化  */
+    from {
+        /* 定義元素在該影格所套用的樣式 */
+        transform:translateY(-5px);  /* transform-function */
+    }
+    to {
+        transform:translateY(5px);  /* transform-function */
+    } 
+    }
 
 
         *{
@@ -8,24 +18,25 @@
             margin: 0;
         }
         body{
+            width: 1200px;
+            margin: 0 auto;
             background: #f2f2f2;
             font-family: 'Noto Sans TC', sans-serif;
             color: rgba(0,0,0,.1);
-            }
+        }
         h1{
             position: fixed;
             top: -35px;
+            left: 0;
             font-size: 240px;
             font-family: 'Inter', sans-serif;
             z-index: -1;
             font-weight: 600;
-            
         }
         .all-box{
             width: 1100px;
             margin: 160px auto 60px;
             position: relative;
-            /* z-index: 2; */
             top: 0px;
         }
         .all-box img{
@@ -38,7 +49,6 @@
             border-radius: 50%;
             position: absolute;
             bottom: -20px;
-            /* left: 0; */
             right: 0;
             z-index: -100;
             background: #d9d9d9ec;
@@ -76,25 +86,152 @@
             left: 0;
             color: #9E9E9E;
         }
-        #tongue{
-            display: none;
-        }
-        .tongue{
-            width: 118px;
-            position: absolute;
-            top: 252px;
-            left: 18.5px;
+        .hover-all{
             z-index: 100;
             opacity: 0;
+            /* opacity: 1; */
+            position: absolute;
         }
-        .tongue img{
+        .hover-all img{
             width: 100%;
             opacity: .5;
             filter: invert(28%) sepia(77%) saturate(2835%) hue-rotate(342deg) brightness(123%) contrast(98%);
         }
-        .tongue:hover{
+        .hover-all:hover{
             opacity: 1;
-            
+        }
+        #tongue{
+            display: none;
+        }
+        #neck{
+            display: none;
+        }
+        #chuck{
+            display: none;
+        }
+        #brisket{
+            display: none;
+        }
+        #shank{
+            display: none;
+        }
+        #backshank{
+            display: none;
+        }
+        #backshank .explain-box{
+            left: 150px;
+        }
+        #rib{
+            display: none;
+        }
+        #plate{
+            display: none;
+        }
+        #shortloin{
+            display: none;
+        }
+        #shortloin .explain-box{
+            left: 150px;
+        }
+        #flank{
+            display: none;
+        }
+        #flank .explain-box{
+            left: 150px;
+        }
+        #sirloin{
+            display: none;
+        }
+        #sirloin .explain-box{
+            left: 150px;
+        }
+        #tenderloin{
+            display: none;
+        }
+        #tenderloin .explain-box{
+            left: 150px;
+        }
+        #bottomsirloin{
+            display: none;
+        }
+        #bottomsirloin .explain-box{
+            left: 150px;
+        }
+        #round{
+            display: none;
+        }
+        #round .explain-box{
+            left: 150px;
+        }
+        .tongue{
+            width: 118px;
+            top: 252px;
+            left: 18.5px;
+        }
+        .neck{
+            width: 148.5px;
+            top: 124px;
+            left: 192.5px;
+        }
+        .chuck{
+            width: 199px;
+            top: 99px;
+            left: 256.5px;
+        }
+        .brisket{
+            width: 250px;
+            top: 335.5px;
+            left: 257px;
+        }
+        .shank{
+            width: 210px;
+            top: 461.5px;
+            left: 345px;
+        }
+        .rib{
+            width: 190px;
+            top: 98px;
+            left: 437.5px;
+        }
+        .plate{
+            width: 160px;
+            top: 336.5px;
+            left: 466.5px;
+        }
+        .shortloin{
+            width: 114px;
+            top: 110px;
+            left: 627px;
+        }
+        .flank{
+            width: 212px;
+            top: 356px;
+            left: 629px;
+        }
+        .sirloin{
+            width: 143px;
+            top: 111.5px;
+            left: 732.5px;
+        }
+        .tenderloin{
+            width: 226.5px;
+            top: 172px;
+            left: 661px;
+        }
+        .bottomsirloin{
+            width: 143px;
+            top: 215.5px;
+            left: 745.5px;
+        }
+        .round{
+            width: 164px;
+            top: 98px;
+            left: 856px;
+        }
+        .backshank{
+            width: 206px;
+            top: 396px;
+            left: 818.5px;
         }
         .background-op{
             width: 100%;
@@ -106,43 +243,43 @@
             z-index: 4;
         }
         .explain-box{
-            width: 450px;
-            height: 660px;
+            width: 400px;
+            height: 670px;
             color: #000;
             background: #fff;
             box-shadow: -14px 6 52 rgba(0, 0, 0, 0.25);
             border-radius: 20px;
             text-align: center;
             position: fixed;
-            top: 50px;
+            top: 40px;
             right: 120px;
             z-index: 4;
         }
         h2{
             font-size: 40px;
             color: #4F4F4F;
-            margin-top: 10px;
+            margin-top: 8px;
         }
         .box-border{
-            margin: 25px 20px;
-            padding: 20px 0;
-            background: #F3F3F3;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin: 10px 20px;
+            padding: 10px 0;
             border-radius: 20px;
         }
         .compare-item{
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         h3{
             font-weight: 400;
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-size: 20px;
+            margin-bottom: 5px;
         }
         .group-length{
             display: flex;
+            align-items: center;
         }
         p{
-            padding: 0 15px;
+            padding: 0 5px;
+            font-size: 16px;
         }
         .length-box{
             width: 100%;
@@ -158,35 +295,95 @@
             border-radius: 20px;
         } 
         .length-1{
-            width: 80%;
+            width: 60%;
         }
-        .food-box{
+        .length-2{
+            width: 40%;
+        } 
+        .length-3{
+            width: 50%;
+        }
+        .length-4{
+            width: 90%;
+        }
+        .length-5{
+            width: 10%;
+        }
+        .length-6{
+            width: 10%;
+        }
+        .maturity-box{
             display: flex;
             justify-content: space-evenly;
-            height: 130px
+            margin: 20px 0;
+            padding: 0 20px;
         }
-        .food-item{
-            margin: 10px 0;
-            width: 170px;
-            height: 110px;
+        .maturity-img{
+            width: 40%;
+            padding-left: 10px;
+            animation-name: rotate-keyframe; 
+            /* 套用的 keyframe */ 
+            animation-duration: 2s;          /* 動畫持續時間 */
+            animation-iteration-count: infinite; /* 動畫播放次數 */
+            animation-timing-function: linear;   /* 影片加速速率 */
+            animation-direction: alternate; 
+        }
+        .maturity-img img{
+            width: 80%;
+            transform: rotate(30deg) translateY(30px);
+        }
+        .maturity-number-box{
+            width: 50%;
+            height: 130px;
+            /* background: blue; */
+            border: 1px solid #2e2e2e46;
+            border-radius: 40px;
+        }
+        h5{
+            font-size: 25px;
+            padding-top: 15px;
+            color: #707070;
+        }
+        .maturity-number-box p{
+            padding-top: 0px;
+            font-size: 25px;
+        }
+        .maturity-number-box span{
+            letter-spacing: 5px;
+            font-style: oblique;
+            font-size: 45px;
+            font-weight: 700;
+        }
+        h4{
+            font-weight: 500;
+            color: #999999;
+            font-size: 20px;
+            text-align-last: left;
+            padding-left: 65px;
+            margin-top: 35px;
+            margin-bottom: 15px;
             position: relative;
         }
-        .food-item img{
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            object-position: center;
-            object-fit: cover;
-            filter: brightness(75%);
-        }
-        span{
+        h4::before{
+            content: '\edfc';
+            font-family: "remixicon";
             position: absolute;
-            top: 33px;
-            left: 13px;
-            font-size: 27px;
-            font-weight: 700;
-            color: #fff;
-            letter-spacing: 5px;
+            top: 6px;
+            left: 45px;
         }
-
-
+        .tag{
+            margin: 10px 20px;
+            text-align-last: left;
+            padding: 0 20px;
+        }
+        h6{
+            font-weight: 500;
+            color: #fff;
+            font-size: 18px;
+            background: #4d4d4d;
+            display: inline-block;
+            margin: 5px 2px;
+            padding: 5px 15px;
+            border-radius: 200px;
+            letter-spacing: 2px;
+        }
