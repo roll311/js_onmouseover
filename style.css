@@ -18,7 +18,6 @@
             margin: 0;
         }
         body{
-            width: 1200px;
             margin: 0 auto;
             background: #f2f2f2;
             font-family: 'Noto Sans TC', sans-serif;
@@ -491,28 +490,12 @@
 
 
 
-        @media screen and (max-width:1440px) {
-            h1{
-                font-size: 230px;
-            }
-        }
-
-        @media screen and (max-height:760px) {
-            .explain-box{
-                transform: scale(.9);
-            }
-        }
-
-
         @media screen and (max-width: 1380px) {
             h1{
-                font-size: 220px;
-            }
-            
-        }
-
-        @media screen and (max-width: 1320px) {
-            h1{
                 font-size: 210px;
+            }
+            .explain-box{
+                top: -35px;
+                transform: scale(.8);
             }
         }
